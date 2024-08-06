@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="login.php" method="POST">
+                <h1>Étudiants</h1>
+                <input type="hidden" name="role" value="etudiant">
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Mot de passe" required />
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="login.php" method="POST">
+                <h1>Enseignants</h1>
+                <input type="hidden" name="role" value="enseignant">
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Mot de passe" required />
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Vous êtes un enseignant ?</h1>
+                    <p>Veuillez vous connecter SVP !</p>
+                    <button class="ghost" id="signIn">Connexion</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Êtes-vous un étudiant ?</h1>
+                    <p>Veuillez vous connecter SVP !</p>
+                    <button class="ghost" id="signUp">Connexion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
